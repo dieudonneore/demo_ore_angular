@@ -1,0 +1,22 @@
+<p>Liste des Utilisateurs</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">Job</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i=index">
+      <th scope="row"><i class="bi bi-pencil-square" (click)="editUser(user)" style="cursor: pointer;"></i></th>
+      <td (click)="editUser(user)" style="cursor: pointer;">{{user?.firstName}}</td>
+      <td (click)="editUser(user)" style="cursor: pointer;">{{user?.lastName}}</td>
+      <td (click)="editUser(user)" style="cursor: pointer;">{{user?.job}}</td>
+      <td (click)="editUser(user)" style="cursor: pointer;">{{user?.email}}</td>
+    </tr>
+  </tbody>
+</table>
